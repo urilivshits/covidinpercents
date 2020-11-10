@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//!importing tachyons
+import "tachyons";
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
