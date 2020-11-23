@@ -49,8 +49,8 @@ class App extends Component {
       const seconds = addZero(timeStamp.getSeconds());
       return (
         <div className="tc">
-          <h1>COVID-19 Tracker Status</h1>
-          <p>as of {day}, {month} {date}, {year} at {hours}:{minutes}:{seconds}</p> 
+          <h1>COVID-19 Tracker</h1>
+          <p>status as of {day}, {month} {date}, {year} at {hours}:{minutes}:{seconds}</p> 
           <CardList countries={this.state.countriesSaved} />
         </div>
       )

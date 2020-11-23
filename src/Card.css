@@ -1,0 +1,14 @@
+.hoverRow:hover {
+    background: #bddfff;
+}
+
+.hoverRow .flag {
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+}
+
+.hoverRow:hover .flag {
+  transform: scale(1.15);
+}
