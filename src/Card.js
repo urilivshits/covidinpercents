@@ -79,7 +79,7 @@ const Card = ({index, flag, population, country, cases, populationInfected, toda
                 <br></br>
                 Total Tests: {totalTests.toLocaleString("en")}  */}
                 Work In Progress
-                {/* <iframe title="iFrame" src="http://www.google.com/search?q=apple+recipe" /> */}
+                {/* <iframe title="iFrame" src="https://www.google.com/search?q=apple+recipe" /> */}
                 
             </td>
             {/* {activeRow && (
