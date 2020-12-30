@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/urilivshits/covidinpercents/static/css/main.657c8f4b.chunk.css",
+    "main.js": "/urilivshits/covidinpercents/static/js/main.41df458a.chunk.js",
+    "main.js.map": "/urilivshits/covidinpercents/static/js/main.41df458a.chunk.js.map",
+    "runtime-main.js": "/urilivshits/covidinpercents/static/js/runtime-main.5c7d75bd.js",
+    "runtime-main.js.map": "/urilivshits/covidinpercents/static/js/runtime-main.5c7d75bd.js.map",
+    "xlsx.js": "/urilivshits/covidinpercents/static/js/xlsx.c0ba0790.chunk.js",
+    "xlsx.js.map": "/urilivshits/covidinpercents/static/js/xlsx.c0ba0790.chunk.js.map",
+    "static/js/3.b9ce86ee.chunk.js": "/urilivshits/covidinpercents/static/js/3.b9ce86ee.chunk.js",
+    "static/js/3.b9ce86ee.chunk.js.map": "/urilivshits/covidinpercents/static/js/3.b9ce86ee.chunk.js.map",
+    "static/css/4.31461e4f.chunk.css": "/urilivshits/covidinpercents/static/css/4.31461e4f.chunk.css",
+    "static/js/4.ad842c2d.chunk.js": "/urilivshits/covidinpercents/static/js/4.ad842c2d.chunk.js",
+    "static/js/4.ad842c2d.chunk.js.map": "/urilivshits/covidinpercents/static/js/4.ad842c2d.chunk.js.map",
+    "static/js/5.6317bc0c.chunk.js": "/urilivshits/covidinpercents/static/js/5.6317bc0c.chunk.js",
+    "static/js/5.6317bc0c.chunk.js.map": "/urilivshits/covidinpercents/static/js/5.6317bc0c.chunk.js.map",
+    "static/js/6.b3370aaa.chunk.js": "/urilivshits/covidinpercents/static/js/6.b3370aaa.chunk.js",
+    "static/js/6.b3370aaa.chunk.js.map": "/urilivshits/covidinpercents/static/js/6.b3370aaa.chunk.js.map",
+    "static/js/7.3cab0ee1.chunk.js": "/urilivshits/covidinpercents/static/js/7.3cab0ee1.chunk.js",
+    "static/js/7.3cab0ee1.chunk.js.map": "/urilivshits/covidinpercents/static/js/7.3cab0ee1.chunk.js.map",
+    "index.html": "/urilivshits/covidinpercents/index.html",
+    "static/css/4.31461e4f.chunk.css.map": "/urilivshits/covidinpercents/static/css/4.31461e4f.chunk.css.map",
+    "static/css/main.657c8f4b.chunk.css.map": "/urilivshits/covidinpercents/static/css/main.657c8f4b.chunk.css.map",
+    "static/js/4.ad842c2d.chunk.js.LICENSE.txt": "/urilivshits/covidinpercents/static/js/4.ad842c2d.chunk.js.LICENSE.txt",
+    "static/js/5.6317bc0c.chunk.js.LICENSE.txt": "/urilivshits/covidinpercents/static/js/5.6317bc0c.chunk.js.LICENSE.txt",
+    "static/js/6.b3370aaa.chunk.js.LICENSE.txt": "/urilivshits/covidinpercents/static/js/6.b3370aaa.chunk.js.LICENSE.txt",
+    "static/js/main.41df458a.chunk.js.LICENSE.txt": "/urilivshits/covidinpercents/static/js/main.41df458a.chunk.js.LICENSE.txt",
+    "static/media/worldFlag.5bd9d262.png": "/urilivshits/covidinpercents/static/media/worldFlag.5bd9d262.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5c7d75bd.js",
+    "static/css/4.31461e4f.chunk.css",
+    "static/js/4.ad842c2d.chunk.js",
+    "static/css/main.657c8f4b.chunk.css",
+    "static/js/main.41df458a.chunk.js"
+  ]
+}
