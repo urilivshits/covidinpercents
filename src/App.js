@@ -5,9 +5,9 @@ class App extends Component {
   constructor () {
     super ()
     this.state = {
-      countriesSaved: []
-      // ,
-      // populationSaved: []
+      countriesSaved: [],
+      countriesExtraSaved: [],
+      worldExtraSaved: []
     } 
   };
 
@@ -16,11 +16,17 @@ class App extends Component {
     .then(response => response.json())
     // .then(json => console.log(json))
     .then(fetchedCountries => this.setState({countriesSaved: fetchedCountries}));
-    console.log("fetched COVID data");
+    console.log("fetched COVID data 1");
 
-    // fetch ("https://pkgstore.datahub.io/core/population/population_json/data/315178266aa86b71057e993f98faf886/population_json.json")
-    // .then(fetchedPopulation => this.setState({populationSaved: fetchedPopulation}));
-    // console.log(this.state.populationSaved);
+    fetch ("https://raw.githubusercontent.com/amcharts/covid-charts/master/data/json/total_timeline.json")
+    .then (response => response.json())
+    .then(fetchedCountriesExtra => this.setState({countriesExtraSaved: fetchedCountriesExtra}));
+    console.log("fetched COVID data 2");
+
+    fetch ("https://raw.githubusercontent.com/amcharts/covid-charts/master/data/json/world_timeline.json")
+    .then (response => response.json())
+    .then(fetchedWorldExtra => this.setState({worldExtraSaved: fetchedWorldExtra}));
+    console.log("fetched COVID data 3");
   };
 
   render () {
@@ -48,10 +54,10 @@ class App extends Component {
       const minutes = addZero(timeStamp.getMinutes());
       const seconds = addZero(timeStamp.getSeconds());
       return (
-        <div className="tc">
+        <div className="tc center db">
           <h1>COVID-19 Tracker</h1>
           <p>status as of {day}, {month} {date}, {year} at {hours}:{minutes}:{seconds}</p> 
-          <CardList countries={this.state.countriesSaved} />
+          <CardList countries={this.state.countriesSaved} covid_total_timeline={this.state.countriesExtraSaved} covid_world_timeline={this.state.worldExtraSaved}/>
         </div>
       )
     }

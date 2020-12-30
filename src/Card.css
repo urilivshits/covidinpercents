@@ -1,5 +1,6 @@
 .hoverRow:hover {
-    background: #bddfff;
+    /* background: #bddfff; */
+    background: #4287f5;
 }
 
 .hoverRow .flag {
@@ -11,4 +12,38 @@
 
 .hoverRow:hover .flag {
   transform: scale(1.15);
+}
+
+/* .detailsRow {
+  background: red;
+  position: relative;
+  top: 67px;
+} */
+
+tr {
+  display: grid;
+  grid-template-columns: 30px repeat(16, 1fr);
+  grid-template-rows: 70px;
+}
+
+/* this aligns vertically in a cell */
+td {
+  vertical-align: middle;
+  height: 70px;
+  line-height: 63px;
+  display: inline-block;
+}
+
+.hide-row {
+  display: none;
+  /* height: 0px;
+  width: 0px; */
+}
+
+.expanded-row-content {
+  display: grid;
+  grid-column: 1/-1;
+  height: 100px;
+  /* transition: all 300ms; */
+  /* transform: translateY(100px); */
 }

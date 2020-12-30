@@ -1,5 +1,80 @@
+html {
+    background: #1e2128;
+    color: white;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {
+    background: #1e2128;
+    color: white;
+}
+
 p {
     /* cursor: none; */
     outline: none;
     user-select: none;
+    height: 48px;
+    /* margin-left: 30px; */
 }
+
+th p {
+    background: #4287f5;
+}
+
+th p:hover {
+    background: #0253d4;
+}
+
+p.ascending {
+    /* background: #00449e; */
+    background:#0253d4;
+}
+
+p.descending {
+    /* background: #00449e; */
+    background: #0253d4;
+}
+
+p.ascending::after {
+    /* content: '👇';
+    display: inline-block;
+    margin-left: 1em; */
+
+    /* position: relative; */
+    /* top: 10px; */
+    content: "";
+    margin-left: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+}
+
+p.descending::after {
+    /* content: '☝️';
+    display: inline-block;
+    margin-left: 1em; */
+
+    content: "";
+    margin-left: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+/* 
+i.ascending {
+    position: absolute;
+    top: 0px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+} */
