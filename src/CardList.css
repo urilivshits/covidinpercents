@@ -10,13 +10,15 @@ body {
 table {
     background: #1e2128;
     color: white;
+    width: 100%;
 }
 
 .sticky {
     position: fixed;
     top: 0px;
     z-index: 100;
-    background-color: #282c34
+    background-color: #282c34;
+    width: 100%;
 }
 
 p {

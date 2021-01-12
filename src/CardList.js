@@ -98,7 +98,7 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
                 {/* <div style={showGeneralMap ? {display: "block"} : {display: "none"}}> */}
                     <CovidMap covid_total_timeline={covid_total_timeline} covid_world_timeline={covid_world_timeline}/>
                 {/* </div> */}
-                <table className="center">
+                <table>
                     <thead id="header">
                         <tr className="f6 link">
                             <th>
