@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./Card.js";
 import zaandam from "./flags/zaandam.png";
 import worldFlag from "./flags/worldFlag.png";
@@ -13,6 +13,7 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
     const flagsArray = Object.entries(flags);
     const [sortConfig, setSortConfig] = useState(null);
     const [showGeneralMap, setShowGeneralMap] = useState(true);
+    const [sticky, setSticky] = useState(false);
 
     // console.log(covid_total_timeline);
     // console.log(covid_world_timeline);
@@ -62,6 +63,33 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
     // console.log(Map());
     // console.log(showGeneralMap);
 
+    useEffect(() => {
+        const header = document.getElementById("header");
+
+        const scrollCallBack = window.addEventListener("scroll", () => {
+            console.log(window.pageYOffset, header.offsetTop);
+
+            if (window.pageYOffset > header.offsetTop + 600) {
+                header.classList.add("sticky");
+                if (sticky !== true) {
+                    setSticky(true);
+                }
+            }
+            else {
+                header.classList.remove("sticky");
+                if (sticky !== false) {
+                    setSticky(false);
+                }
+            }
+        });
+
+        return () => {
+            window.removeEventListener("scroll", scrollCallBack)
+        };
+
+    }, []);
+
+    
     return (
             <div>
                 {/* <div style={showGeneralMap ? {display: "none"} : {display: "block"}}> */}
@@ -71,7 +99,7 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
                     <CovidMap covid_total_timeline={covid_total_timeline} covid_world_timeline={covid_world_timeline}/>
                 {/* </div> */}
                 <table className="center">
-                    <thead>
+                    <thead id="header">
                         <tr className="f6 link">
                             <th>
                                 {/* <p className={`f6 link ph2 pv2 br2 white bg-light-blue hover-bg-dark-blue`} onClick={test}> */}
@@ -96,7 +124,8 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
                                 </p>
                             </th>
                             <th>
-                                <p className={`${getClassNamesFor("cases")} f6 link ph2 pv2 br2 white`} onClick={() => requestSort("cases")}>
+                                <p className={`${sortConfig === null ? "descending" : getClassNamesFor("cases")} f6 link ph2 pv2 br2 white`} onClick={() => requestSort("cases")}>
+                                {/* <p className={`${getClassNamesFor("cases")} f6 link ph2 pv2 br2 white`} onClick={() => requestSort("cases")}> */}
                                     Cases
                                 </p>
                             </th>
@@ -221,6 +250,10 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
                                     thisPop = countryPop.Value;
                                     countries[i].population = thisPop;
                                 }
+                                // else {
+                                //     thisPop = 0;
+                                //     countries[i].population = thisPop;
+                                // }
                             });
                             
                             //adding null checks

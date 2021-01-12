@@ -12,6 +12,13 @@ table {
     color: white;
 }
 
+.sticky {
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    background-color: #282c34
+}
+
 p {
     /* cursor: none; */
     outline: none;

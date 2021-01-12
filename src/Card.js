@@ -45,6 +45,8 @@ const Card = ({index, flag, population, country, cases, populationInfected, toda
         }
     };
 
+    // console.log(population, country);
+
     return (
         <tr className="f6 hoverRow" onClick={() => setActiveRow(!activeRow)}>
         {/* <tr className="f6 hoverRow" onClick={() => setActiveRow(!activeRow)} ref={rowRef}> */}
@@ -64,10 +66,10 @@ const Card = ({index, flag, population, country, cases, populationInfected, toda
             <td>{activeToPop.toFixed(2)+"%"}</td>
             <td>{recovered.toLocaleString("en")}</td>
             <td>{recoveredToPop.toFixed(2)+"%"}</td>
-            {/* <td>{critical.toLocaleString("en")}</td> */}
+            <td>{critical.toLocaleString("en")}</td>
             {/* <td>{criticalToPop}</td> */}
             {/* <td>{totalTests.toLocaleString("en")}</td> */}
-            <td>{totalTests}</td>
+            {/* <td>{totalTests}</td> */}
             <td>{cutNumber(totalTests)}</td>
             {/* <td>{parseInt(totalTests).toString().slice(0, 3) + "kk"}</td> */}
             <td className={!activeRow ? "hide-row" : "expanded-row-content"}>
