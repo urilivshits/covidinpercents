@@ -63,13 +63,14 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
     // console.log(Map());
     // console.log(showGeneralMap);
 
+    //making the header sticky
     useEffect(() => {
         const header = document.getElementById("header");
 
         const scrollCallBack = window.addEventListener("scroll", () => {
             console.log(window.pageYOffset, header.offsetTop);
 
-            if (window.pageYOffset > header.offsetTop + 600) {
+            if (window.pageYOffset > header.offsetTop + 500) {
                 header.classList.add("sticky");
                 if (sticky !== true) {
                     setSticky(true);
