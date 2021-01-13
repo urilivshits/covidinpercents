@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/covidinpercents/static/css/main.cba4c803.chunk.css",
-    "main.js": "/covidinpercents/static/js/main.487716b1.chunk.js",
-    "main.js.map": "/covidinpercents/static/js/main.487716b1.chunk.js.map",
+    "main.js": "/covidinpercents/static/js/main.b93ada36.chunk.js",
+    "main.js.map": "/covidinpercents/static/js/main.b93ada36.chunk.js.map",
     "runtime-main.js": "/covidinpercents/static/js/runtime-main.e840b4d7.js",
     "runtime-main.js.map": "/covidinpercents/static/js/runtime-main.e840b4d7.js.map",
     "xlsx.js": "/covidinpercents/static/js/xlsx.5a8fcabb.chunk.js",
@@ -24,7 +24,7 @@
     "static/js/4.8c8aa53c.chunk.js.LICENSE.txt": "/covidinpercents/static/js/4.8c8aa53c.chunk.js.LICENSE.txt",
     "static/js/5.92c685a6.chunk.js.LICENSE.txt": "/covidinpercents/static/js/5.92c685a6.chunk.js.LICENSE.txt",
     "static/js/6.d631a1a6.chunk.js.LICENSE.txt": "/covidinpercents/static/js/6.d631a1a6.chunk.js.LICENSE.txt",
-    "static/js/main.487716b1.chunk.js.LICENSE.txt": "/covidinpercents/static/js/main.487716b1.chunk.js.LICENSE.txt",
+    "static/js/main.b93ada36.chunk.js.LICENSE.txt": "/covidinpercents/static/js/main.b93ada36.chunk.js.LICENSE.txt",
     "static/media/worldFlag.5bd9d262.png": "/covidinpercents/static/media/worldFlag.5bd9d262.png"
   },
   "entrypoints": [
@@ -32,6 +32,6 @@
     "static/css/4.31461e4f.chunk.css",
     "static/js/4.8c8aa53c.chunk.js",
     "static/css/main.cba4c803.chunk.css",
-    "static/js/main.487716b1.chunk.js"
+    "static/js/main.b93ada36.chunk.js"
   ]
 }
