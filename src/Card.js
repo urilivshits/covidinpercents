@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 import "./Card.css";
 
 const Card = ({index, flag, population, country, cases, populationInfected, todaysCases, todaysToPop, deaths, deathsToPop, todaysDeaths, todaysDeathsToPop, recovered, recoveredToPop, active, activeToPop, critical, criticalToPop, casesPerOneMillion, deathsPerOneMillion, totalTests, testsPerOneMillion}) => {
@@ -45,13 +46,23 @@ const Card = ({index, flag, population, country, cases, populationInfected, toda
         }
     };
 
-    // console.log(population, country);
+    // useEffect(() => {
+    //     const script = document.createElement('script');
+    //     script.src = "https://cse.google.com/cse.js?cx=0e358a8c2b785b001&";
+    //     script.async = true;
+    //      document.body.appendChild(script);
+
+    //      return () => {
+    //         document.body.removeChild(script);
+    //       }
+    // }, []);
 
     return (
         <tr className="f6 hoverRow" onClick={() => setActiveRow(!activeRow)}>
         {/* <tr className="f6 hoverRow" onClick={() => setActiveRow(!activeRow)} ref={rowRef}> */}
             <td>{index}</td>
-            <td className="flag" style={!activeRow ? null : {position: "relative", transition: "all 300ms", transform: "scale(2.0) translateY(30px)"}}>{flag}</td>
+            {/* <td className="flag" style={!activeRow ? null : {position: "relative", transition: "all 300ms", transform: "scale(2.0) translateY(30px)"}}>{flag}</td> */}
+            <td>{flag}</td>
             <td style={{paddingTop: "25px", lineHeight: "1"}}>{country}</td> 
             <td>{population.toLocaleString("en")}</td>
             <td>{cases.toLocaleString("en")}</td>
@@ -80,8 +91,12 @@ const Card = ({index, flag, population, country, cases, populationInfected, toda
                 Tests / Million: {testsPerOneMillion.toLocaleString("en")} 
                 <br></br>
                 Total Tests: {totalTests.toLocaleString("en")}  */}
+                {/* <iframe title="iframe" src="https://urilivshits.github.io/tetris/" />; */}
+                
+                {/* <div className="gcse-searchresults-only" data-gname="covid" query="covid"></div> */}
                 Work In Progress
                 {/* <iframe title="iFrame" src="https://www.google.com/search?q=apple+recipe" /> */}
+                {/* <iframe title="iFrame" src={"https://www.google.com/search?igu=1&ei=&q=covid+india"} /> */}
                 
             </td>
             {/* {activeRow && (

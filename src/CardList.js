@@ -8,8 +8,9 @@ import "./CardList.css";
 // import Flag from "./Flag.js";
 // import Map from "./Map";
 import CovidMap from "./CovidMap";
+import SearchBox from "./SearchBox";
 
-const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
+const CardList = ({countries, covid_world_timeline, covid_total_timeline, searchfieldData, searchfield}) => {
     const flagsArray = Object.entries(flags);
     const [sortConfig, setSortConfig] = useState(null);
     const [showGeneralMap, setShowGeneralMap] = useState(true);
@@ -68,7 +69,7 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
         const header = document.getElementById("header");
 
         const scrollCallBack = window.addEventListener("scroll", () => {
-            console.log(window.pageYOffset, header.offsetTop);
+            // console.log(window.pageYOffset, header.offsetTop);
 
             if (window.pageYOffset > header.offsetTop + 500) {
                 header.classList.add("sticky");
@@ -90,7 +91,6 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
 
     }, []);
 
-    
     return (
             <div>
                 {/* <div style={showGeneralMap ? {display: "none"} : {display: "block"}}> */}
@@ -98,6 +98,7 @@ const CardList = ({countries, covid_world_timeline, covid_total_timeline}) => {
                 {/* </div> */}
                 {/* <div style={showGeneralMap ? {display: "block"} : {display: "none"}}> */}
                     <CovidMap covid_total_timeline={covid_total_timeline} covid_world_timeline={covid_world_timeline}/>
+                    <SearchBox searchChange={searchfieldData} />
                 {/* </div> */}
                 <table>
                     <thead id="header">

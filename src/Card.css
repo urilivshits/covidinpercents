@@ -47,3 +47,8 @@ td {
   /* transition: all 300ms; */
   /* transform: translateY(100px); */
 }
+
+script {
+  width: 100%;
+  height: 200px;
+}

@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       countriesSaved: [],
       countriesExtraSaved: [],
-      worldExtraSaved: []
+      worldExtraSaved: [],
+      searchfield: ""
     } 
   };
 
@@ -29,8 +30,13 @@ class App extends Component {
     .then (response => response.json())
     .then(fetchedWorldExtra => this.setState({worldExtraSaved: fetchedWorldExtra}));
     console.log("fetched COVID data 3");
-      };
+  };
 
+  onSearchChange = (event) => {
+    this.setState({searchfield: event.target.value})
+  };
+
+  
   render () {
     console.log("rendered");
     if (this.state.countriesSaved.length === 0 || this.state.countriesExtraSaved.length === 0 || this.state.worldExtraSaved.length === 0) {
@@ -56,11 +62,16 @@ class App extends Component {
       const hours = addZero(timeStamp.getHours());
       const minutes = addZero(timeStamp.getMinutes());
       const seconds = addZero(timeStamp.getSeconds());
+
+      const filteredCountries = this.state.countriesSaved.filter(countries => {
+        return (countries.country.toUpperCase().includes(this.state.searchfield.toUpperCase()))
+      });
+
       return (
         <div className="tc center db">
-          <h1 style={{margin: "20px"}}>COVID-19 Tracker</h1>
+          <h1 style={{margin: "20px"}}>COVID-19 in Percents, %</h1>
           <p style={{margin: "10px", height: "24px"}}>status as of {day}, {month} {date}, {year} at {hours}:{minutes}:{seconds}</p> 
-          <CardList countries={this.state.countriesSaved} covid_total_timeline={this.state.countriesExtraSaved} covid_world_timeline={this.state.worldExtraSaved}/>
+          <CardList countries={filteredCountries} covid_total_timeline={this.state.countriesExtraSaved} covid_world_timeline={this.state.worldExtraSaved} searchfieldData={this.onSearchChange} searchfield={this.state.searchfield}/>
         </div>
       )
     }

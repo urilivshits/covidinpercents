@@ -1663,7 +1663,7 @@ const CovidMap = ({covid_world_timeline, covid_total_timeline}) => {
     }, [covid_world_timeline, covid_total_timeline]);
 
     return (
-    <div id="chartdiv" style={{ width: "100%", height: "400px", background: "#1e2128" }}></div>
+    <div id="chartdiv" style={{ width: "100%", height: "500px", background: "#1e2128" }}></div>
     );
 
 };

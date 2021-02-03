@@ -1,0 +1,9 @@
+.searchBox {
+    text-align: center;
+    /* padding: 25px 0px; */
+    margin: 10px 0px;
+    width: 95%;
+    /* background-color: #282c34; */
+    /* color: white; */
+    border-radius: 5px;
+}
